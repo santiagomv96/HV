@@ -695,4 +695,57 @@ def mostrar_quien_soy():
     elif opcion_seleccionada == "Integralmente":
         Grafico_completo()
 
-mostrar_quien_soy()
+def mostrar_logros():
+    import pandas as pd
+    opcion_seleccionada = st.selectbox(
+    "Qué enfoque ver:",
+    ("Desde lo técnico", "Desde lo humano"))
+
+    if opcion_seleccionada == "Desde lo humano":
+        st.markdown(f"**Vivir tranquilo**")
+        st.markdown(f"**Vivir solo**")
+        st.markdown(f"**Disfrutar mi trabajo**")
+        st.markdown(f"**Tener una vida en equilibrio**")
+        st.markdown(f"**Tener la oportunidad de aprender cada día**")
+        st.markdown(f"**Poder tener mis gustos y ayudar a las personas**")
+        st.markdown(f"**Hacer sentir orgulloso a mis padres**")
+    elif opcion_seleccionada == "Desde lo técnico":
+        # Definir los datos de ejemplo
+        data = {
+            "Logro": [
+                "HUB Medellin", 
+                "Nearshoring", 
+                "Automatizador", 
+                "Iniciativa de capacitación", 
+                "Liderazgo celulas de trabajo"
+            ],
+            "Contexto": [
+                "Analisis de prefactibilidad para modificar modelo de transporte primario en secos para todo grupo"
+                ,"Evaluar Flujos de bastecimiento"
+                ,"Integración de varias herramientas en una ejecución automatica de informes"
+                ,"Creación de capacitaciones en el negocio para el negocio"
+                ,"El equipo se divide en celulas de trabajo, cada uno con diferentes objetivos"],
+
+            "Aprendizaje": [
+                "Gestión de conocimiento y seguimiento a desarrollo ejecutado por un proveedor externo",
+                "Mejorar la comunicación, validando expectativas e información para desarrollo de lógicas y proyectos"
+                ,"Liderazgo, confianza, seguimiento, gestión de iniciativas e industrialización de desarrollos"
+                ,"Identificación de necesidades de conocimiento y generación de espacios para transmitir conocimiento  "
+                ,"Confianza en los demás, seguimiento a iniciativas, comunicación y reuniones efectivas, tener empatia y ayudar a seleccionar practiacntes, gestión por OKR"]
+        }
+        df = pd.DataFrame(data)
+
+        # Crear el DataFrame
+        for index, row in df.iterrows():
+            st.markdown(f"### {row['Logro']}")
+            st.markdown(f"**Contexto:** {row['Contexto']}")
+            st.markdown(f"**Aprendizaje:** {row['Aprendizaje']}\n")
+
+
+st.sidebar.header("Navegación")
+page = st.sidebar.radio("Ir a:", ["Quien soy", "Principales Logros"])
+if page == "Quien soy":
+    mostrar_quien_soy()
+elif page == "Principales Logros":
+    mostrar_logros()
+
