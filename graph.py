@@ -702,17 +702,17 @@ def mostrar_logros():
     ("Desde lo técnico", "Desde lo humano"))
 
     if opcion_seleccionada == "Desde lo humano":
-        st.markdown(f"**Vivir tranquilo**")
+        st.markdown(f"### Vivir tranquilo")
         st.markdown(f'Aprender a vivir valorando mis defectos y fortalezas, agradeciendo por lo que tengo y trabajando por lo que quiero')
-        st.markdown(f"**Vivir solo**")
+        st.markdown(f""### Vivir solo")
         st.markdown(f'Uno de los procesos mas duros e inesperados pero de las mejore experiencias para mi crecimiento')
-        st.markdown(f"**Disfrutar mi trabajo**")
+        st.markdown(f""### Disfrutar mi trabajo")
         st.markdown(f'Tras una construcción y deconstrución aprendí que hay momentos duros, que son estos los que mas aportan')
-        st.markdown(f"**Tener una vida en equilibrio**")
+        st.markdown(f""### Tener una vida en equilibrio")
         st.markdown(f'Aprender a separar espacios, tiempos, querer en cierta medida la rutina y valorar mi salud')
-        st.markdown(f"**Poder tener mis gustos y ayudar a las personas**")
+        st.markdown(f""### Poder tener mis gustos y ayudar a las personas")
         st.markdown(f'Disfrutar del fruto del trabajo y la satisfacción del deber cumplido')
-        st.markdown(f"**Hacer sentir orgulloso a mis padres**")
+        st.markdown(f'"### Hacer sentir orgulloso a mis padres")
         st.markdown(f'El día que escuché estas palabras entendí que había hecho lo que tanto quería')
     elif opcion_seleccionada == "Desde lo técnico":
         # Definir los datos de ejemplo
